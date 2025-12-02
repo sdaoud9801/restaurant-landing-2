@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "imprima";
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+    background-color: black;
+    overflow: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255,222,185,1);
+    z-index: 4;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav__logo {
+    color: #DC0E0E;
+}
+
+.nav__hamburger {
+    height: 20px;
+    transform: rotate(0);
+    transition: transform 0.2s;
+}
+
+.rotated {
+    transform: rotate(0.25turn);
+}
+
+.nav__mobilemenu {
+    transition: height 0.2s, padding 0.2s;
+    height: 150px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.nav__mobilemenu ul li {
+    margin-bottom: 10px;
+    color: #DC0E0E;
+}
+
+#nav__cta {
+    color: #FFDEB9;
+}
+
+.hide {
+    height: 0px;
+    padding: 0px;
+}
+
+.hero {
+    position: relative;
+}
+
+.story__text {
+    padding: 20px;
+}
+
+.story__imgcontainer {
+    padding: 20px;
+}
+
+.story__img {
+    width: 100%;
+    border-radius: 10px;;
+}
+
+h3 {
+    color: #DC0E0E;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #FFDEB9;
+}
+
+.dish__imgcontainer {
+    padding: 20px;
+}
+
+.dish__text {
+    padding: 20px;
+}
+
+.dish__img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+}
+
+.hero__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__header {
+    color: #DC0E0E;
+    font-family: "imprima";
+    font-size: 1.2rem;
+}
+
+.hero__subheader {
+    color: #FFDEB9;
+    font-size: 0.8rem;
+}
+
+.hero__cta, .cta {
+    background-color: #DC0E0E;
+    color: #FFDEB9;
+    padding: 6px;
+    margin-top: 10px;
+    border-radius: 2px;
+    width: fit-content;
+}
+
+.location__frame {
+    padding: 20px;
+}
+
+.location__text {
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 500px) {
+    html {
+        font-size: 18px;
+    }
+    .nav__container {
+        padding: 0px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .nav__hamburger {
+        display: none;
+    }
+    .hide {
+        height: 100%;
+        width: auto;
+    }
+    .nav__mobilemenu {
+        align-items: center;
+    }
+    .nav__mobilemenu ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        gap: 30px;
+    }
+
+    .nav__mobilemenu ul li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    #nav__cta {
+        margin-top: 0;
+    }
+
+    .hero__header {
+        font-size: 2rem;
+    }
+
+    .story,
+    .dish,
+    .location {
+        padding: 0px 100px;
+    }
+}
+
+@media screen and (min-width: 840px) {
+
+    html {
+        font-size: 18px;
+    }
+
+    
+    .story {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .story__imgcontainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .story__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dish {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+    
+    .dish__imgcontainer {
+        width: 100%;
+    }
+
+    .dish__text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .location {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .location__frame {
+        width: 100%;
+        height: 100%;
+    }
+
+    .location__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .hero__header {
+        font-size: 5rem;
+    }
+
+    .hero__subheader {
+        font-size: 2rem;
+    }
+
+    .hero__cta {
+        font-size: 2rem;
+        padding: 10px;
+    }
+}

@@ -1,15 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Seafood Factory</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <nav></nav>
+    <nav>
+        <div class="nav__container">
+            <span class="nav__logo">
+                <strong>
+                    THE SEAFOOD FACTORY
+                </strong>
+            </span>
+            <img src="./assets/hamburger.svg" class="nav__hamburger" id="nav__hamburger">
+        </div>
+        <div id="nav__mobilemenu" class="nav__mobilemenu hide">
+            <ul>
+                <li>Menu</li>
+                <li>Location</li>
+                <li>About</li>
+                <li class="cta" id="nav__cta"><strong>Book now</strong></li>
+            </ul>
+        </div>
+    </nav>
     <main>
-        
+        <div class="hero">
+            <video id="hero__video" autoplay loop muted>
+                <source src="./assets/2894881-uhd_3840_2160_24fps.mp4">
+            </video>
+            <div class="hero__text">
+                <div class="hero__header">
+                    <strong>The Seafood Factory</strong>
+                </div>
+                <div class="hero__subheader">
+                    Fresh from the sea, straight to your plate
+                </div>
+                <div class="hero__cta cta">
+                    Reserve
+                </div>
+            </div>
+        </div>
+        <div class="story">
+            <div class="story__imgcontainer">
+                <img src="./assets/story.jpg" class="story__img">
+            </div>
+            <div class="story__text">
+                <h3>OUR STORY FROM SEA TO TABLE</h3>
+                <br>
+                <p>
+                    It all started with a fisherman and his son, who spent their mornings chasing the sunrise along the
+                    coast
+                    and their afternoons sharing the day’s catch with neighbors. What began as a small seaside stand
+                    grew
+                    into a passion — bringing people together over honest, ocean-fresh food.
+                </p>
+                <br>
+                <div class="story__cta cta">Book now</div>
+            </div>
+        </div>
+        <div class="dish">
+            <div class="dish__imgcontainer">
+                <img src="./assets/dish.jpg" class="dish__img">
+            </div>
+            <div class="dish__text">
+                <h3>SHRIMP CALAMARI</h3>
+                <br>
+                <p>
+                    Crispy, golden, and ocean-fresh — our Shrimp & Calamari is lightly seasoned, flash-fried, and served
+                    with lemon-garlic aioli. A perfect mix of crunch, zest, and coastal flavor in every bite.
+                </p>
+                <div>ORDER</div>
+            </div>
+        </div>
+        <div class="location">
+            <div class="location__frame">
+                <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?q=cairo&key=AIzaSyC7lqtbc1ZIsuECLDNo0jbc9B0h7hJoaCk"></iframe>
+            </div>
+            <div class="location__text">
+                <h3>VISIT US</h3>
+                <p>
+                    <br>
+                    <strong>ADDRESS</strong><br>
+                    Building 200, EL Ezz Street, Heliopolis<br><br>
+                    <strong>HOURS</strong><br>
+                    Daily from 10 am to 8pm
+                </p>
+            </div>
+        </div>
     </main>
     <footer></footer>
 </body>
+<script>
+    let hamburger = document.getElementById("nav__hamburger");
+    let mobileMenu = document.getElementById("nav__mobilemenu");
+    hamburger.addEventListener("click", () => {
+        if (hamburger.classList.contains('rotated')) {
+            hamburger.classList.remove('rotated');
+        } else {
+            hamburger.classList.add("rotated");
+        }
+        if (mobileMenu.classList.contains("hide")) {
+            mobileMenu.classList.remove('hide')
+        } else {
+            mobileMenu.classList.add("hide");
+        }
+    })
+</script>
+
 </html>
