@@ -55,6 +55,7 @@ nav {
 .nav__mobilemenu ul li {
     margin-bottom: 10px;
     color: #DC0E0E;
+    cursor: pointer;
 }
 
 #nav__cta {
@@ -80,7 +81,7 @@ nav {
 
 .story__img {
     width: 100%;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 
 h3 {
@@ -141,6 +142,7 @@ video {
     margin-top: 10px;
     border-radius: 2px;
     width: fit-content;
+    cursor: pointer;
 }
 
 .location__frame {
